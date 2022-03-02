@@ -50,8 +50,10 @@
             app:layout_constraintTop_toBottomOf="@id/createacctText" >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rfirst_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,8 +73,10 @@
             app:layout_constraintTop_toBottomOf="@id/FirstName">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rlast_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -92,8 +96,10 @@
             app:layout_constraintTop_toBottomOf="@id/lastName">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rmobile_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="phone"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -113,8 +119,10 @@
             app:layout_constraintTop_toBottomOf="@id/MobileNumber">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/remail_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -134,8 +142,10 @@
             app:layout_constraintTop_toBottomOf="@id/Email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rcity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -155,8 +165,10 @@
             app:layout_constraintTop_toBottomOf="@id/City">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -176,8 +188,10 @@
             app:layout_constraintTop_toBottomOf="@id/State">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rpincode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:padding="@dimen/_10sdp" />
 
         </com.google.android.material.textfield.TextInputLayout>
