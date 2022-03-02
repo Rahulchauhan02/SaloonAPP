@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/search_background"
+                android:elevation="@dimen/_10sdp"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#FFFFFF"
+                android:minHeight="@dimen/_200sdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchText">
+
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/circleIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:minHeight="@dimen/_25sdp"
+                app:ci_drawable="@color/black"
+                app:ci_drawable_unselected="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager"
+                app:layout_constraintStart_toStartOf="@+id/viewPager"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+
+            <TextView
+                android:id="@+id/personalChoicesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/paytone_one"
+                android:paddingLeft="@dimen/_25sdp"
+                android:text="Personal choices"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circleIndicator" />
+
+            <LinearLayout
+                android:id="@+id/layoutChoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_100sdp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/personalChoicesText">
+
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/femaleChoice"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/female" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Saloon For "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Female"/>
+                </LinearLayout>
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/maleChoice"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/male" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Saloon For "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Male"/>
+                </LinearLayout>
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/spaChoice"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/spa" />
+                    <TextView
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Spa "/>
+
+                </LinearLayout>
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/massageChoice"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/massage" />
+                    <TextView
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Massage"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/adBanner"
+                app:layout_constraintTop_toBottomOf="@id/layoutChoices"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:src="@drawable/banner_two"
+                android:scaleType="fitXY"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toBottomOf="@id/adBanner"
+                android:layout_width="match_parent"
+                android:id="@+id/topOfferLayout"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_200sdp">
+
+
+                <TextView
+                    android:id="@+id/topofferText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Top Offers %"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/paytone_one"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    android:id="@+id/topOfferSeeAllBtn"
+                    android:textColor="#00B0FF"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topofferText">
+
+                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+
+                    android:layout_weight="1">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/topOfferImage1"
+                        android:src="@drawable/banner_two"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_height="wrap_content"
+                        android:text="offer Title "/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="product"/>
+                </LinearLayout>
+
+                      <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/topOfferImage2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/banner_one"/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="OfferTitle "/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Product Name"/>
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toBottomOf="@id/topOfferLayout"
+                android:layout_width="match_parent"
+                android:id="@+id/nearBySaloonLayout"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_200sdp">
+
+
+                <TextView
+                    android:id="@+id/nearByText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Near by Saloon"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/paytone_one"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    android:id="@+id/nearBySeeAllBtn"
+                    android:textColor="#00B0FF"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nearByText">
+
+                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                     android:layout_weight="1">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/nearBySaloon1"
+                        android:src="@drawable/banner_two"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_height="wrap_content"
+                        android:text="Saloon Name"/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Location"/>
+                </LinearLayout>
+
+                      <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/nearBySaloon2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/banner_one"/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="saloon Name "/>
+                    <TextView
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Location"/>
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
