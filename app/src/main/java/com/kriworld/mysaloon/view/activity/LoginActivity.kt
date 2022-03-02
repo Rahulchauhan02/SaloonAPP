@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(loginBinding.root)
 
         loginBinding.sendOtpBtn.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,UserRegisterActivity::class.java))
             this.finish()
         }
     }

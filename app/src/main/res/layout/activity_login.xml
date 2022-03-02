@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".view.activity.LoginActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_170sdp"
         android:fontFamily="@font/boogaloo"
         android:text="My Saloon"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="@dimen/_60ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +25,13 @@
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/edittext_background"
         android:hint="Enter the Phone Number"
         android:minWidth="@dimen/_48sdp"
         android:padding="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 

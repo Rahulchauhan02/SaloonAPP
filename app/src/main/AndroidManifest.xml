@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySaloon">
         <activity
+            android:name=".view.activity.UserRegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Login">
@@ -21,7 +24,7 @@
         </activity>
         <activity
             android:name=".view.activity.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
