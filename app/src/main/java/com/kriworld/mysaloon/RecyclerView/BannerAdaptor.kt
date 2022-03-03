@@ -13,7 +13,7 @@ import com.kriworld.mysaloon.model.HomeBannerModel
 class BannerAdaptor(val list:ArrayList<HomeBannerModel>,val context: Context)
     : RecyclerView.Adapter<BannerAdaptor.BannerViewHolder>(){
   inner class  BannerViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-      val image = itemView.findViewById<ImageView>(R.id.bannerImage)
+      val image = itemView.findViewById<ImageView>(R.id.banner_image)
   }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BannerViewHolder {

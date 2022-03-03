@@ -2,7 +2,11 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/architects_daughter</item>
+        <item>@font/arizonia</item>
+        <item>@font/audiowide</item>
         <item>@font/boogaloo</item>
+        <item>@font/clicker_script</item>
+        <item>@font/italianno</item>
         <item>@font/paytone_one</item>
         <item>@font/poppins_thin</item>
     </array>

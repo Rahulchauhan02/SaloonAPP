@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/_15sdp"
-    android:layout_marginRight="@dimen/_15sdp"
     app:cardCornerRadius="@dimen/_5sdp">
 
     <ImageView
-        android:id="@+id/bannerImage"
+        android:id="@+id/banner_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/ic_launcher_background"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/banner_content"
+         />
 
 </androidx.cardview.widget.CardView>

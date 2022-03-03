@@ -3,7 +3,6 @@ package com.kriworld.mysaloon.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kriworld.mysaloon.R
 import com.kriworld.mysaloon.databinding.ActivityUserRegisterBinding
 
 class UserRegisterActivity : AppCompatActivity() {
@@ -12,12 +11,11 @@ class UserRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         userRegisterBinding = ActivityUserRegisterBinding.inflate(layoutInflater)
         setContentView(userRegisterBinding.root)
-
-        userRegisterBinding.registerBtn.setOnClickListener {
+        userRegisterBinding.registerAccBtn.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
-            this.finish()
         }
+
 
     }
 }

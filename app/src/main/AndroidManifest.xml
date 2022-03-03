@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySaloon">
         <activity
-            android:name=".view.activity.UserRegisterActivity"
+            android:name="com.kriworld.mysaloon.view.activity.UserRegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name="com.kriworld.mysaloon.view.activity.LoginActivity"
             android:exported="true"
           >
             <intent-filter>
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.MainActivity"
+            android:name="com.kriworld.mysaloon.view.activity.MainActivity"
             android:exported="true" />
 
         <meta-data

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.HomeFragment">
+    tools:context=".view.fragment.HomeFragment"
+
+    tools:ignore="SpeakableTextPresentCheck">
 
 
     <ScrollView
@@ -13,414 +17,123 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <EditText
-                android:id="@+id/searchText"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/home_toolbar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/search_background"
-                android:elevation="@dimen/_10sdp"
-                android:hint="Search"
-                android:inputType="textPersonName"
-                android:maxLines="1"
-                android:padding="@dimen/_12sdp"
+                android:minHeight="@dimen/_60sdp"
+                android:background="@color/app_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteY="2dp">
+
+                <ImageView
+                    android:id="@+id/nav_menu"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_baseline_menu_icon_24" />
+
+                <ImageView
+                    android:id="@+id/app_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/saloon"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/app_icon"
+                    android:fontFamily="cursive"
+                    android:text="@string/app_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25ssp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/toolbar_search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/app_icon"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:hint="@string/search_text"
+                    android:inputType="text"
+                    android:minHeight="@dimen/_25sdp"
+                    android:padding="@dimen/_10sdp"
+                    tools:ignore="Autofill,TextFields" />
+
+            </RelativeLayout>
+          </androidx.appcompat.widget.Toolbar>
+
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager"
+                android:id="@+id/banner_list"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_220sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="#FFFFFF"
+                android:layout_height="@dimen/_200sdp"
                 android:minHeight="@dimen/_200sdp"
-                android:orientation="horizontal"
-                android:padding="@dimen/_5sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/searchText">
+                app:layout_constraintTop_toBottomOf="@id/home_toolbar" />
 
-
-            </androidx.viewpager2.widget.ViewPager2>
 
             <me.relex.circleindicator.CircleIndicator3
-                android:id="@+id/circleIndicator"
-                android:layout_width="0dp"
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minWidth="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:minHeight="@dimen/_25sdp"
+                android:minHeight="@dimen/_10sdp"
                 app:ci_drawable="@color/black"
                 app:ci_drawable_unselected="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/viewPager"
-                app:layout_constraintStart_toStartOf="@+id/viewPager"
-                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
-
-
-            <TextView
-                android:id="@+id/personalChoicesText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/paytone_one"
-                android:paddingLeft="@dimen/_25sdp"
-                android:text="Personal choices"
-                android:textSize="@dimen/_20ssp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/circleIndicator" />
-
-            <LinearLayout
-                android:id="@+id/layoutChoices"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/_100sdp"
-                android:orientation="horizontal"
-                android:weightSum="4"
-                android:padding="@dimen/_5sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/personalChoicesText">
-
-                    <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/femaleChoice"
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/female" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:text="Saloon For "/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Female"/>
-                </LinearLayout>
-                    <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/maleChoice"
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/male" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:text="Saloon For "/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Male"/>
-                </LinearLayout>
-                    <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/spaChoice"
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/spa" />
-                    <TextView
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:text="Spa "/>
-
-                </LinearLayout>
-                    <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/massageChoice"
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/massage" />
-                    <TextView
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:text="Massage"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/adBanner"
-                app:layout_constraintTop_toBottomOf="@id/layoutChoices"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_130sdp"
-                android:src="@drawable/banner_two"
-                android:scaleType="fitXY"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                app:layout_constraintTop_toBottomOf="@id/adBanner"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:id="@+id/topOfferLayout"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/_200sdp">
-
-
-                <TextView
-                    android:id="@+id/topofferText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:text="Top Offers %"
-                    android:textSize="@dimen/_15ssp"
-                    android:fontFamily="@font/paytone_one"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See All"
-                    android:textSize="@dimen/_13ssp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textStyle="bold"
-                    android:id="@+id/topOfferSeeAllBtn"
-                    android:textColor="#00B0FF"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/topofferText">
-
-                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-
-                    android:layout_weight="1">
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"
-                        android:layout_gravity="center_horizontal"
-                        android:id="@+id/topOfferImage1"
-                        android:src="@drawable/banner_two"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="@dimen/_15ssp"
-                        android:layout_height="wrap_content"
-                        android:text="offer Title "/>
-                    <TextView
-                        android:textSize="@dimen/_15ssp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="product"/>
-                </LinearLayout>
-
-                      <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageView
-                        android:id="@+id/topOfferImage2"
-                        android:layout_width="@dimen/_100sdp"
-                        android:scaleType="centerCrop"
-                        android:layout_height="@dimen/_100sdp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/banner_one"/>
-                    <TextView
-                        android:textSize="@dimen/_15ssp"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:text="OfferTitle "/>
-                    <TextView
-                        android:textSize="@dimen/_15ssp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Product Name"/>
-                </LinearLayout>
-
-
-                </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@id/banner_list" />
 
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/nearBySaloonLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:minHeight="@dimen/_200sdp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/topOfferLayout">
-
-
-                <TextView
-                    android:id="@+id/nearByText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:fontFamily="@font/paytone_one"
-                    android:text="Near by Saloon"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/nearBySeeAllBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="See All"
-                    android:textColor="#00B0FF"
-                    android:textSize="@dimen/_13ssp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nearByText">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/nearBySaloon1"
-                            android:layout_width="@dimen/_100sdp"
-                            android:layout_height="@dimen/_100sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/banner_two" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="Saloon Name"
-                            android:textSize="@dimen/_15ssp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="Location"
-                            android:textSize="@dimen/_15ssp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/nearBySaloon2"
-                            android:layout_width="@dimen/_100sdp"
-                            android:layout_height="@dimen/_100sdp"
-                            android:layout_gravity="center_horizontal"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/banner_one" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="saloon Name "
-                            android:textSize="@dimen/_15ssp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="Location"
-                            android:textSize="@dimen/_15ssp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_drawer_menu"/>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
