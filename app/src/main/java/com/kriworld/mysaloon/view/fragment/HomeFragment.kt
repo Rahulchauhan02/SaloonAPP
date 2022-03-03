@@ -13,8 +13,10 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.kriworld.mysaloon.R
 import com.kriworld.mysaloon.RecyclerView.BannerAdaptor
+import com.kriworld.mysaloon.RecyclerView.OfferAdaptor
 import com.kriworld.mysaloon.databinding.FragmentHomeBinding
 import com.kriworld.mysaloon.model.HomeBannerModel
+import com.kriworld.mysaloon.model.OfferModel
 import me.relex.circleindicator.CircleIndicator3
 import java.util.*
 import kotlin.collections.ArrayList
@@ -33,7 +35,7 @@ class HomeFragment : Fragment() {
 
           aNavigationDrawer()
             AddBannerList()
-
+            AddOfferList()
 
 
 
@@ -110,7 +112,18 @@ class HomeFragment : Fragment() {
 
     }
 
+        fun AddOfferList(){
 
+            val list = ArrayList<OfferModel>()
+            for(i in 1..4){
+                list.add(OfferModel(R.drawable.banner_one," 15% off"))
+                 list.add(OfferModel(R.drawable.banner_two," 15% off"))
+                 list.add(OfferModel(R.drawable.banner_three," 15% off"))
+                 list.add(OfferModel(R.drawable.background_image," 15% off"))
+            }
+
+            homeBinding.offerList.adapter = OfferAdaptor(list,requireContext())
+        }
 
 
 }

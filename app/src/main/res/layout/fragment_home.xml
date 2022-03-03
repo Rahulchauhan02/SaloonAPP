@@ -117,6 +117,160 @@
                 app:layout_constraintTop_toBottomOf="@id/banner_list" />
 
 
+            <LinearLayout
+                android:id="@+id/choices_layout"
+               android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indicator">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/female_choice"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/female_icon"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10ssp"
+                        android:gravity="center_horizontal"/>
+
+
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/male_choice"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/male_icon"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10ssp"
+                        android:gravity="center_horizontal"/>
+
+
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/spa_choice"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/spa_icon"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spa"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10ssp"
+                        android:gravity="center_horizontal"/>
+
+
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/massage_choice"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/massage_icon"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Massage"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10ssp"
+                        android:gravity="center_horizontal"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_150sdp"
+                android:maxHeight="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/choices_layout">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/Top_offers"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offer_seeAll_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:text="@string/see_all"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/offer_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/offer_seeAll_btn"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="0dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp" />
+
+
+            </RelativeLayout>
 
 
 
@@ -131,6 +285,7 @@
         android:layout_width="@dimen/_200sdp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_menu_header"
         app:menu="@menu/navigation_drawer_menu"/>
 
 
