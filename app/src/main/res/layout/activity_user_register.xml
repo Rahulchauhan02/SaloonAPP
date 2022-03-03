@@ -52,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text"
-                    android:maxLength="10"
+
                     android:maxLines="1"
                     android:padding="@dimen/_15sdp"
                     android:textColor="@color/black"
@@ -79,7 +79,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="text"
-                        android:maxLength="10"
+
                         android:maxLines="1"
                         android:padding="@dimen/_15sdp"
                         android:textColor="@color/black"
@@ -105,8 +105,7 @@
                        android:id="@+id/user_email"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:inputType="number|text"
-                       android:maxLength="10"
+                     android:inputType="textEmailAddress"
                        android:maxLines="1"
                        android:padding="@dimen/_15sdp"
                        android:textColor="@color/black"
@@ -133,7 +132,7 @@
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
                        android:inputType="textMultiLine|text"
-                       android:maxLength="10"
+
                        android:maxLines="1"
                        android:padding="@dimen/_15sdp"
                        android:textColor="@color/black"
@@ -147,7 +146,7 @@
                       app:boxStrokeColor="@color/black"
                        android:layout_width="match_parent"
                      android:layout_height="wrap_content"
-                     android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                      android:hint="@string/city"
                      android:layout_marginStart="@dimen/_25sdp"
                       android:layout_marginEnd="@dimen/_25sdp"
@@ -160,7 +159,7 @@
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:inputType="text"
-                           android:maxLength="10"
+
                            android:maxLines="1"
                            android:padding="@dimen/_15sdp"
                            android:textColor="@color/black"
@@ -187,12 +186,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text"
-                    android:maxLength="10"
+
                     android:maxLines="1"
                     android:padding="@dimen/_15sdp"
                     android:textColor="@color/black"
                     android:textColorHint="#795548"
                     tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+             <com.google.android.material.textfield.TextInputLayout
+                     android:id="@+id/textInputLayout7"
+                      app:boxStrokeColor="@color/black"
+                       android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/_10sdp"
+                     android:hint="@string/pincode"
+                     android:layout_marginStart="@dimen/_25sdp"
+                      android:layout_marginEnd="@dimen/_25sdp"
+                      app:hintTextColor="#262525"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/user_pincode"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:inputType="text"
+
+           android:maxLines="1"
+           android:padding="@dimen/_15sdp"
+           android:textColor="@color/black"
+           android:textColorHint="#795548"
+           tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -214,7 +242,7 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:inputType="text"
-           android:maxLength="10"
+
            android:maxLines="1"
            android:padding="@dimen/_15sdp"
            android:textColor="@color/black"
