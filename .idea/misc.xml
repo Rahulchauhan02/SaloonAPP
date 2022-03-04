@@ -8,6 +8,7 @@
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/bottom_nav.xml" value="0.19" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/edittext_background.xml" value="0.149" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_booking.xml" value="0.19" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1815" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1775" />
@@ -15,6 +16,11 @@
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/login_background.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/login_btn_bg.xml" value="0.16301887379120425" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/search_background.xml" value="0.19" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/font/arizonia.xml" value="0.6569086651053864" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/font/audiowide.xml" value="0.6569086651053864" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/font/clicker_script.xml" value="0.6569086651053864" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/font/italianno.xml" value="0.6569086651053864" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/font/paytone_one.xml" value="0.6569086651053864" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout-mdpi/activity_login.xml" value="0.4528302049755674" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout-xxxhdpi/activity_login.xml" value="0.2264151024877837" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/activity_login.xml" value="0.24482758620689654" />
@@ -22,11 +28,15 @@
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/activity_user_register.xml" value="0.6067924746672604" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_booking.xml" value="0.5538641686182669" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_home.xml" value="0.6792453074633511" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_invite_and_earn.xml" value="0.59125" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_notification.xml" value="0.5538641686182669" />
-        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_profile.xml" value="0.5538641686182669" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_profile.xml" value="0.6792453074633511" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_profile_details.xml" value="0.5934755332496863" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_rajkaa_points.xml" value="0.59125" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/home_banner.xml" value="0.3721973094170404" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/navigation_menu_header.xml" value="0.2264151024877837" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/offer_single_item.xml" value="0.5538641686182669" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/profile_layout_menu_item.xml" value="0.59125" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/saloon_list_item.xml" value="0.5538641686182669" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/menu/app_menu.xml" value="0.5538641686182669" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/menu/navigation_drawer_menu.xml" value="0.6792453074633511" />

@@ -22,4 +22,6 @@
     <string name="Top_offers">Top Offers %</string>
     <string name="see_all">See All</string>
     <string name="pincode">Pin-Code</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update">Update</string>
 </resources>

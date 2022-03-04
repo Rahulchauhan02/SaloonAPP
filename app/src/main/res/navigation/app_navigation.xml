@@ -24,5 +24,78 @@
         android:id="@+id/profileFragment"
         android:name="com.kriworld.mysaloon.view.fragment.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_termsAndConditionFragment"
+            app:destination="@id/termsAndConditionFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_inviteFragment"
+            app:destination="@id/inviteFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_rajkaaPointsFragment"
+            app:destination="@id/rajkaaPointsFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myBookingFragment"
+            app:destination="@id/myBookingFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_needHelpFragment"
+            app:destination="@id/needHelpFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_registerAsPartner"
+            app:destination="@id/registerAsPartner"
+            app:popUpTo="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditionFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.TermsAndConditionFragment"
+        android:label="fragment_terms_and_condition"
+        tools:layout="@layout/fragment_terms_and_condition" />
+    <fragment
+        android:id="@+id/registerAsPartner"
+        android:name="com.kriworld.mysaloon.view.fragment.RegisterAsPartner"
+        android:label="fragment_register_as_partner"
+        tools:layout="@layout/fragment_register_as_partner" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/inviteFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.InviteFragment"
+        android:label="fragment_invite"
+        tools:layout="@layout/fragment_invite" />
+    <fragment
+        android:id="@+id/needHelpFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.NeedHelpFragment"
+        android:label="fragment_need_help"
+        tools:layout="@layout/fragment_need_help" />
+    <fragment
+        android:id="@+id/myBookingFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.MyBookingFragment"
+        android:label="fragment_my_booking"
+        tools:layout="@layout/fragment_my_booking" />
+    <fragment
+        android:id="@+id/rajkaaPointsFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.RajkaaPointsFragment"
+        android:label="fragment_rajkaa_points"
+        tools:layout="@layout/fragment_rajkaa_points" />
+    <fragment
+        android:id="@+id/profileDetailsFragment"
+        android:name="com.kriworld.mysaloon.view.fragment.ProfileDetailsFragment"
+        android:label="fragment_profile_details"
+        tools:layout="@layout/fragment_profile_details" />
 </navigation>
