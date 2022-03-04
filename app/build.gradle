@@ -63,4 +63,7 @@ dependencies {
     //circleImageview
       implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    //dexter library
+     implementation 'com.karumi:dexter:6.2.3'
+
 }
