@@ -1,14 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragment.TermsAndConditionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms And Conditions"
+        android:textStyle="bold"
+        android:textColor="@color/app_color"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/alata"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:justificationMode="inter_word"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_15ssp"
+                            android:text="This document is a digital record in terms of the Information Technology Act, 2000, and policies there under as applicable and the modified rules concerned with electronic records in various forms as amended by the IT Act, 2000. It is issued with reference to the provisions of Rule 3(1) of the IT Guidelines (Intermediaries guidelines) Rules, 2011 that require issuing the rules and regulations, Terms of Use, and Privacy Policy for access or usage of Rojkaa platform (website: www.Rojkaa.com and Rojkaa app for mobile devices and tablets)."
+                           />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:justificationMode="inter_word"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_15ssp"
+                         android:text="Rojkaa platform is fully owned and operated by Rojkaa Web Services Private Limited, a company incorporated under the Companies Act, 1956 and having its registered office at G-43, First Floor, Sector-3, Noida– 201301."
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:text="Terms of Use"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+
+                            />
+                    </LinearLayout>
+
+             <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           android:text="The listed Terms of Use on this page govern your use of the Rojkaa Website and Rojkaa application for smart devices. Both the “Application” and the “Website” are referred to as the Platform.
+
+         \n\n     \nYou are requested to go through these “Terms of Use” before subscribing or using the services offered by our platform. By downloading, installing or even simply accessing the Rojkaa web-based platform,you shall be contracting with Rojkaa and you signify that you agree to our Terms of Use and other policies, including Privacy Policy, Cookie Policy, Cancellation, and Refund Policy, and Take Down Policy, which comes into effect on the very date when you download, install or use the Services, and form a legally binding setting to abide by the same.
+"
+                            android:justificationMode="inter_word"
+
+
+                            />
+                    </LinearLayout>
+
+
+              <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="With reference to the implementation of these Terms of Use, our, we or us in this document shall denote Rojkaa (a digital platform of the Rojkaa Web Services Private Limited). Also, the terms you or your shall denote any individual user, either partner or customer, who has agreed to become a Rojkaa Member by providing essential information for registration on the platform using any web-connected device.
+\n\n
+Rojkaa enables transactions (both cash and online) between partners and customers. The partners can list their business on the Rojkaa platform so that the potential customers can locate them and make bookings. On the other hand, Rojkaa platform allows the customers can find, select, and book appointments for required grooming and personal care services from the listed neighborhood services including but not limited to the salons, spas, and beauty parlors on the platform.
+"
+                            android:textSize="@dimen/_15ssp"
+                            />
+                    </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
