@@ -88,7 +88,12 @@
         android:id="@+id/needHelpFragment"
         android:name="com.kriworld.mysaloon.view.fragment.NeedHelpFragment"
         android:label="fragment_need_help"
-        tools:layout="@layout/fragment_need_help" />
+        tools:layout="@layout/fragment_need_help" >
+        <action
+            android:id="@+id/action_needHelpFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myBookingFragment"
         android:name="com.kriworld.mysaloon.view.fragment.MyBookingFragment"
