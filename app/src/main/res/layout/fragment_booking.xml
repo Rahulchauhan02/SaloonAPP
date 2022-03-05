@@ -1,12 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.fragment.BookingFragment">
 
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/location_btn"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/location_text_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="25"
+                android:text="Location Name"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/location_btn"
+                app:layout_constraintStart_toEndOf="@+id/location_btn"
+                app:layout_constraintTop_toTopOf="@+id/location_btn" />
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:minWidth="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:elevation="@dimen/_10sdp"
+     >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_baseline_search_24"
+               android:layout_marginStart="@dimen/_10sdp"
+               android:id="@+id/booking_search_btn"/>
+
+           <EditText
+               android:id="@+id/booking_search_text"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@drawable/search_background"
+               android:ellipsize="end"
+               android:gravity="center_vertical"
+               android:hint="Saloon name or Service Name... "
+               android:maxLines="1"
+               android:minEms="20"
+               android:paddingLeft="@dimen/_40sdp"
+               android:textSize="@dimen/_12ssp"
+               tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+       </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Popular Saloon Around You"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/booking_saloon_list"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

@@ -10,8 +10,11 @@
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_booking.xml" value="0.19" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1815" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1775" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.165" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1775" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.165" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.177" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/login_background.xml" value="0.1775" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/drawable/login_btn_bg.xml" value="0.16301887379120425" />
@@ -26,6 +29,7 @@
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/activity_login.xml" value="0.24482758620689654" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/activity_main.xml" value="0.6067924746672604" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/activity_user_register.xml" value="0.6067924746672604" />
+        <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/booking_saloon_single_item.xml" value="0.6792453074633511" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/camer_gallery_dialog.xml" value="0.715311004784689" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_about_us.xml" value="0.59125" />
         <entry key="..\:/android studio projects/MySaloon/app/src/main/res/layout/fragment_booking.xml" value="0.5538641686182669" />
