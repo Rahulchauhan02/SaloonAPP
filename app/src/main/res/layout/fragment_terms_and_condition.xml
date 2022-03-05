@@ -37,7 +37,7 @@
         <LinearLayout
             android:padding="@dimen/_15sdp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
                     <LinearLayout
@@ -50,8 +50,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_15ssp"
-                            android:text="This document is a digital record in terms of the Information Technology Act, 2000, and policies there under as applicable and the modified rules concerned with electronic records in various forms as amended by the IT Act, 2000. It is issued with reference to the provisions of Rule 3(1) of the IT Guidelines (Intermediaries guidelines) Rules, 2011 that require issuing the rules and regulations, Terms of Use, and Privacy Policy for access or usage of Rojkaa platform (website: www.Rojkaa.com and Rojkaa app for mobile devices and tablets)."
-                           />
+                            android:text="@string/terms_p"/>
                     </LinearLayout>
 
 
@@ -67,8 +66,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_15ssp"
-                         android:text="Rojkaa platform is fully owned and operated by Rojkaa Web Services Private Limited, a company incorporated under the Companies Act, 1956 and having its registered office at G-43, First Floor, Sector-3, Noida– 201301."
-                            />
+                         android:text="@string/terms_p_two"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -77,15 +75,15 @@
                         android:layout_width="match_parent"
                          android:orientation="vertical"
                         android:layout_height="wrap_content">
+
                         <TextView
+                            android:textSize="@dimen/_14ssp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textMultiLine"
                             android:text="Terms of Use"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-
-                            />
+                            tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
              <LinearLayout
@@ -98,10 +96,7 @@
                             android:textSize="@dimen/_15ssp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                           android:text="The listed Terms of Use on this page govern your use of the Rojkaa Website and Rojkaa application for smart devices. Both the “Application” and the “Website” are referred to as the Platform.
-
-         \n\n     \nYou are requested to go through these “Terms of Use” before subscribing or using the services offered by our platform. By downloading, installing or even simply accessing the Rojkaa web-based platform,you shall be contracting with Rojkaa and you signify that you agree to our Terms of Use and other policies, including Privacy Policy, Cookie Policy, Cancellation, and Refund Policy, and Take Down Policy, which comes into effect on the very date when you download, install or use the Services, and form a legally binding setting to abide by the same.
-"
+                           android:text="@string/terms_of_user_p1"
                             android:justificationMode="inter_word"
 
 
@@ -118,17 +113,572 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="With reference to the implementation of these Terms of Use, our, we or us in this document shall denote Rojkaa (a digital platform of the Rojkaa Web Services Private Limited). Also, the terms you or your shall denote any individual user, either partner or customer, who has agreed to become a Rojkaa Member by providing essential information for registration on the platform using any web-connected device.
-\n\n
-Rojkaa enables transactions (both cash and online) between partners and customers. The partners can list their business on the Rojkaa platform so that the potential customers can locate them and make bookings. On the other hand, Rojkaa platform allows the customers can find, select, and book appointments for required grooming and personal care services from the listed neighborhood services including but not limited to the salons, spas, and beauty parlors on the platform.
-"
+                            android:justificationMode="inter_word"
+                            android:text="@string/terms_of_user_p2"
                             android:textSize="@dimen/_15ssp"
                             />
                     </LinearLayout>
 
 
+                         <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amendments and Modifications"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
 
 
+
+                          <LinearLayout
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:justificationMode="inter_word"
+                            android:text="@string/amendents_and_modification_p1"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+                      <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Registration, Booking Fees, Payments and Taxation"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+                       <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1.Registration Fees"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/registration_fee"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+             <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2.Payments"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payments"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+                 <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="   2.1.Cash Payments"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cash_payment"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+                 <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="   2.2.Online Payment"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/online_payment"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3.Taxation"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/taxation"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4.Rojkaa Wallet"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wallet"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5.Rojkaa Coupons"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/coupons"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+
+             <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Appointment Cancellation, Rescheduling, and Rebooking"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apointment_starting_p1"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+
+            <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1.Rescheduling"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rescheduling"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2.Rebooking"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rebooking"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3.Text,Messages And Emails"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_messages_emails"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+         <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Disclaimers"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/disclamers"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+              <LinearLayout
+
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rojkaa – Website and Mobile Apps (iOS and Android) Access and Use"
+                            android:textColor="@color/app_color"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/web_mobile"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/condition1_5"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/condition6_10"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/condition11_15"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+             <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/condition16_20"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+
+              <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                         android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/condition21_25"
+                            android:justificationMode="inter_word"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
