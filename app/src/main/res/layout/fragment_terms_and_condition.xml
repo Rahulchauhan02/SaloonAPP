@@ -46,7 +46,7 @@
                          android:orientation="vertical"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:justificationMode="inter_word"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_15ssp"
@@ -62,7 +62,7 @@
                          android:orientation="vertical"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:justificationMode="inter_word"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_15ssp"
@@ -97,7 +97,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                            android:text="@string/terms_of_user_p1"
-                            android:justificationMode="inter_word"
+
 
 
                             />
@@ -113,7 +113,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:justificationMode="inter_word"
+
                             android:text="@string/terms_of_user_p2"
                             android:textSize="@dimen/_15ssp"
                             />
@@ -149,7 +149,7 @@
                             android:textSize="@dimen/_15ssp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:justificationMode="inter_word"
+
                             android:text="@string/amendents_and_modification_p1"
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
@@ -202,7 +202,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/registration_fee"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
              <LinearLayout
@@ -233,7 +233,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/payments"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -251,7 +251,7 @@
                             android:text="   2.1.Cash Payments"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -266,7 +266,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cash_payment"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -284,7 +284,7 @@
                             android:text="   2.2.Online Payment"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -299,7 +299,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/online_payment"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -316,7 +316,7 @@
                             android:text="3.Taxation"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -331,7 +331,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/taxation"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -349,7 +349,7 @@
                             android:text="4.Rojkaa Wallet"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -364,7 +364,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/wallet"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -381,7 +381,7 @@
                             android:text="5.Rojkaa Coupons"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -397,7 +397,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/coupons"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -431,7 +431,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/apointment_starting_p1"
-                            android:justificationMode="inter_word"
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -450,7 +449,6 @@
                             android:text="1.Rescheduling"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -466,7 +464,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/rescheduling"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -483,7 +481,7 @@
                             android:text="2.Rebooking"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -499,7 +497,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/rebooking"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -516,7 +514,7 @@
                             android:text="3.Text,Messages And Emails"
                             android:textColor="@color/app_color"
                             android:textStyle="bold"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -532,7 +530,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/text_messages_emails"
-                            android:justificationMode="inter_word"
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -565,7 +562,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/disclamers"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -600,7 +597,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/web_mobile"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -615,7 +612,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/condition1_5"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -630,7 +627,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/condition6_10"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -646,7 +643,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/condition11_15"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
              <LinearLayout
@@ -660,7 +657,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/condition16_20"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
@@ -676,7 +673,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/condition21_25"
-                            android:justificationMode="inter_word"
+
                             tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 

@@ -73,7 +73,12 @@
         android:id="@+id/aboutUsFragment"
         android:name="com.kriworld.mysaloon.view.fragment.AboutUsFragment"
         android:label="fragment_about_us"
-        tools:layout="@layout/fragment_about_us" />
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_aboutUsFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/inviteFragment"
         android:name="com.kriworld.mysaloon.view.fragment.InviteFragment"

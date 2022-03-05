@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_weight="5"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_20ssp"/>
+
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item description"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12ssp"/>
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:text="Item Price"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_15ssp"/>
+
+    </LinearLayout>
+
+      <LinearLayout
+          android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+          <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:cardCornerRadius="@dimen/_5sdp"
+              android:elevation="@dimen/_10sdp"
+              >
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/_80sdp"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/banner_two"/>
+          </androidx.cardview.widget.CardView>
+          <androidx.appcompat.widget.AppCompatButton
+              android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="@dimen/_10sdp"
+              android:layout_height="wrap_content"
+              android:textColor="@color/app_color"
+              android:textStyle="bold"
+              android:background="@drawable/button_background_two"
+              android:drawableRight="@drawable/ic_baseline_add_24"
+              android:text="ADD"
+              />
+
+    </LinearLayout>
+
+
+</LinearLayout>
