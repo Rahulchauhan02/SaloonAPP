@@ -21,7 +21,9 @@ class SaloonBookingAdaptor(val context: Context):RecyclerView.Adapter<SaloonBook
 
     override fun onBindViewHolder(holder: BookingSaloonViewHolder, position: Int) {
        holder.itemView.setOnClickListener {
-           it.context.startActivity(Intent(context,SaloonDetailActivity::class.java))
+           val intent = Intent(context,SaloonDetailActivity::class.java)
+
+           it.context.startActivity(intent)
        }
 
     }

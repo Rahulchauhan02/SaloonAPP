@@ -37,23 +37,156 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_15sdp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+          <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Send Us a Message"
+          android:textStyle="bold"
+              android:textColor="@color/app_color"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:textSize="@dimen/_20ssp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Enter Name"
         app:boxStrokeColor="#4A4747"
+        android:layout_marginTop="@dimen/_10sdp"
         app:hintTextColor="@color/black"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-
+                android:id="@+id/need_name"
             android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Type of Query"
+          android:textStyle="bold"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:textSize="@dimen/_15ssp"/>
+      <LinearLayout
+          android:weightSum="5"
+          android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/query"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="4"
+                  app:boxStrokeColor="#4A4747"
+                  android:focusable="false"
+                  app:hintTextColor="@color/black"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/need_queryType"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:focusable="false"
+                      android:text="Services" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <ImageView
+                  android:id="@+id/querylist"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:layout_marginTop="@dimen/_2sdp"
+                  android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="@+id/query"
+                  app:layout_constraintTop_toTopOf="@+id/query" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+          <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Enter Email"
+              android:layout_marginTop="@dimen/_10sdp"
+        app:boxStrokeColor="#4A4747"
+
+        app:hintTextColor="@color/black"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/need_email"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_width="match_parent"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             android:hint="Enter Phone"
+             android:layout_marginTop="@dimen/_10sdp"
+             app:boxStrokeColor="#4A4747"
+             app:hintTextColor="@color/black"
+             android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/need_phone"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+          <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Message"
+          android:textStyle="bold"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:textSize="@dimen/_15ssp"/>
+
+         <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             app:boxStrokeColor="#4A4747"
+        app:hintTextColor="@color/black"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/need_message"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/_200sdp"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+  <androidx.appcompat.widget.AppCompatButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:text="Submit"
+      android:id="@+id/help_submit_btn"
+      android:background="@color/app_color"
+      android:layout_marginTop="@dimen/_15sdp"
+      android:layout_gravity="center_horizontal"/>
+
 
     </LinearLayout>
 </ScrollView>
