@@ -19,12 +19,15 @@
         <activity
             android:theme="@style/Theme.SaloonDetail"
             android:screenOrientation="portrait"
+            android:label=" "
             android:name=".view.activity.SaloonDetailActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".view.activity.UserRegisterActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".view.activity.LoginActivity"
             android:exported="true"></activity>
         <activity

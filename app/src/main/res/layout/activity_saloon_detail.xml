@@ -1,221 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_saloon_detail_scene"
     tools:context=".view.activity.SaloonDetailActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-<androidx.appcompat.widget.Toolbar
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_gravity="start"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        />
-</androidx.appcompat.widget.Toolbar>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:orientation="vertical"
-          android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
 
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24" />
 
-              <TextView
-                  android:id="@+id/saloon_name"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="@dimen/_25sdp"
-                  android:elevation="@dimen/_20sdp"
-                  android:ellipsize="end"
-                  android:fontFamily="@font/alata"
-                  android:maxWidth="@dimen/_300sdp"
-                  android:maxLines="1"
-                  android:text="New Hair Saloon"
-                  android:textColor="@color/black"
-                  android:textSize="@dimen/_20sdp"
-                  android:textStyle="bold"
-                  tools:ignore="HardcodedText" />
-
-              <TextView
-                  android:id="@+id/saloon_address"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/saloon_name"
-                  android:layout_marginStart="@dimen/_25sdp"
-                  android:layout_marginTop="@dimen/_10sdp"
-                  android:elevation="@dimen/_20sdp"
-                  android:ellipsize="end"
-                  android:fontFamily="@font/alata"
-                  android:maxWidth="@dimen/_300sdp"
-                  android:maxLines="1"
-                  android:text="saloon Address"
-                  android:textStyle="bold"
-                  tools:ignore="HardcodedText" />
-
-              <ImageView
-                  android:layout_width="@dimen/_25sdp"
-                  android:layout_height="@dimen/_25sdp"
-                  android:layout_below="@+id/saloon_name"
-                  android:layout_marginTop="@dimen/_8sdp"
-                  android:layout_toRightOf="@+id/saloon_address"
-                  android:src="@drawable/ic_baseline_location_on_24" />
-
-              <androidx.cardview.widget.CardView
-                  android:layout_width="wrap_content"
-                  android:layout_height="match_parent"
-                  android:layout_alignParentEnd="true"
-                  android:layout_marginTop="@dimen/_10sdp"
-                  android:layout_marginEnd="@dimen/_10sdp"
-                  app:cardBackgroundColor="#008745"
-                  app:cardCornerRadius="@dimen/_5sdp">
-
-                  <LinearLayout
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:orientation="horizontal"
-                      android:paddingLeft="@dimen/_5sdp">
-
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="match_parent"
-                          android:layout_gravity="bottom"
-                          android:gravity="center_vertical"
-                          android:text="4.6"
-                          android:textColor="@color/white" />
-
-                      <ImageView
-                          android:layout_width="@dimen/_15sdp"
-                          android:layout_height="match_parent"
-                          android:layout_gravity="center_vertical"
-                          android:layout_marginEnd="@dimen/_5sdp"
-                          android:src="@drawable/ic_baseline_star_24" />
-                  </LinearLayout>
-              </androidx.cardview.widget.CardView>
-
-          </RelativeLayout>
-
-          <FrameLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-
-              <androidx.viewpager2.widget.ViewPager2
-                  android:id="@+id/detail_viewpager"
-                  android:layout_width="match_parent"
-                  android:layout_height="@dimen/_160sdp"
-                  android:background="@drawable/ic_launcher_background"
-                  android:orientation="horizontal" />
-
-              <me.relex.circleindicator.CircleIndicator3
-                  android:id="@+id/detail_indicator"
-                  android:layout_width="match_parent"
-                  android:layout_marginBottom="@dimen/_10sdp"
-                  app:ci_drawable="@color/white"
-                  app:ci_drawable_unselected="@color/black"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="bottom" />
-          </FrameLayout>
-    <LinearLayout
-              android:orientation="horizontal"
-              android:layout_marginTop="@dimen/_10sdp"
-              android:layout_width="wrap_content"
-              android:layout_marginLeft="@dimen/_25sdp"
-              android:layout_height="wrap_content">
-
-        <com.google.android.material.switchmaterial.SwitchMaterial
-
-            android:id="@+id/femaleSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Female"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/maleSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Male"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-               </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recommended"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_15ssp"
-                android:fontFamily="@font/alata"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                />
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/recommend_List"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-
-
-
-        </LinearLayout>
-
-
-
-      </LinearLayout>
-
-
-  </ScrollView>
-
-  </LinearLayout>
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/browse_item"
+    <TextView
+        android:id="@+id/saloon_Name"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/_25sdp"
-        android:background="@drawable/button_background"
-        android:drawableEnd="@drawable/ic_baseline_list_alt_24"
-        android:padding="@dimen/_5sdp"
-        android:text="Browse Item"
-        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/alata"
+        android:text="New Hair Saloon"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-        android:textSize="@dimen/_8sdp"
-        tools:ignore="TouchTargetSizeCheck" />
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="faridabad"
+        app:layout_constraintStart_toStartOf="@+id/saloon_Name"
+        app:layout_constraintTop_toBottomOf="@+id/saloon_Name" />
+
+    <TextView
+        android:id="@+id/Distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="3.5Km"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saloon_Name"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        app:layout_constraintTop_toBottomOf="@+id/address_text"
+        tools:layout_editor_absoluteX="15dp" />
 
 
-</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

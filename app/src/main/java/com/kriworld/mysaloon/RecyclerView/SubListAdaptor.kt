@@ -11,10 +11,10 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kriworld.mysaloon.R
-import com.kriworld.mysaloon.model.RecommendedListModel
+import com.kriworld.mysaloon.model.SubListModel
 
 
-class RecommendAdaptor(val list:ArrayList<RecommendedListModel>,val context: Context):RecyclerView.Adapter<RecommendAdaptor.RecommendViewHolder>() {
+class SubListAdaptor(val list:ArrayList<SubListModel>, val context: Context):RecyclerView.Adapter<SubListAdaptor.RecommendViewHolder>() {
     class RecommendViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
         val name = itemView.findViewById<TextView>(R.id.saloon_item_name)
@@ -27,7 +27,7 @@ class RecommendAdaptor(val list:ArrayList<RecommendedListModel>,val context: Con
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecommendViewHolder {
-       val layout = LayoutInflater.from(context).inflate(R.layout.recommend_list_item,parent,false)
+       val layout = LayoutInflater.from(context).inflate(R.layout.subli_list_single_item,parent,false)
         return RecommendViewHolder(layout)
     }
 
@@ -42,7 +42,7 @@ class RecommendAdaptor(val list:ArrayList<RecommendedListModel>,val context: Con
 
 
         holder.button.setOnClickListener {
-            Toast.makeText(context,"you added ${holder.name}",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"you added ${holder.name.text}",Toast.LENGTH_SHORT).show()
         }
 
     }
