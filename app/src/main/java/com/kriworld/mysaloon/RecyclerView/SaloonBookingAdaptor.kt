@@ -35,6 +35,7 @@ class SaloonBookingAdaptor(val list:ArrayList<BookingSaloonListModel>, val conte
         holder.distance.text = list[position].distance
         holder.rating.text = list[position].rating
         holder.saloon_name.text = list[position].name
+        holder.services.text = list[position].services
 
 
         holder.itemView.setOnClickListener {

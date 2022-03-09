@@ -51,6 +51,13 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
 
         val list =ArrayList<BookingSaloonListModel>()
 
+     for (i in 0..20){
+         list.add(BookingSaloonListModel(R.drawable.salonn_image_one,"Saloon $i","4.4","Faridabad",
+                 "Haircut,Massage,Hair-Color,Spa,Waxing","3 km"))
+     }
+
+
+
         bookingBinding.bookingSaloonList.adapter = SaloonBookingAdaptor(list,requireActivity())
 
 
