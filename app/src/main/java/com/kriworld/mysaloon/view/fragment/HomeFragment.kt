@@ -43,7 +43,7 @@ class HomeFragment : Fragment() {
     }
 
 
-
+// navigation Drawer
     fun aNavigationDrawer(){
           val toggle:ActionBarDrawerToggle = ActionBarDrawerToggle(requireActivity(),homeBinding.drawerLayout,R.string.open,R.string.close)
      homeBinding.drawerLayout.addDrawerListener(toggle)
@@ -74,6 +74,9 @@ class HomeFragment : Fragment() {
         }
 
     }
+
+
+    // home Screen banner function
 
     fun AddBannerList(){
 
@@ -112,6 +115,8 @@ class HomeFragment : Fragment() {
 
     }
 
+
+    // Offer Recycler view
         fun AddOfferList(){
 
             val list = ArrayList<OfferModel>()

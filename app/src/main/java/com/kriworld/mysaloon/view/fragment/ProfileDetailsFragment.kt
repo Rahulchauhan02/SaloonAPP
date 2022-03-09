@@ -54,6 +54,9 @@ private lateinit var profileDetailsFragment: FragmentProfileDetailsBinding
         return profileDetailsFragment.root
     }
 
+
+
+    //asking for Camera and read external storage permission
     fun hasPermissionGranted(){
 
         Dexter.withContext(requireActivity())
@@ -84,6 +87,7 @@ private lateinit var profileDetailsFragment: FragmentProfileDetailsBinding
 
 
 
+    // dialog for Camera and Gallery option
     fun showDialog(){
 
       val dialogBinding = CamerGalleryDialogBinding.inflate(layoutInflater)
@@ -110,6 +114,7 @@ private lateinit var profileDetailsFragment: FragmentProfileDetailsBinding
     }
 
 
+    // Activity result Function
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
     if (requestCode== Constants.CAMERA_CODE){

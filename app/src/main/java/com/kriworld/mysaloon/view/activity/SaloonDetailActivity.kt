@@ -56,6 +56,7 @@ class SaloonDetailActivity : AppCompatActivity() {
     }
 
 
+    // saloon banner ViewPager
     fun saloonImageBanners() {
 
         val list = ArrayList<HomeBannerModel>()
@@ -86,6 +87,7 @@ class SaloonDetailActivity : AppCompatActivity() {
     }
 
 
+    //show item list
     fun showItemList() : ArrayList<MainListModel>{
         val sublist = ArrayList<SubListModel>()
         sublist.add(SubListModel("item 1", "Description 1", "50", "type 1", R.drawable.banner_one))
@@ -126,6 +128,8 @@ class SaloonDetailActivity : AppCompatActivity() {
     }
 
 
+
+    // Menu list dialog
     fun showDialog(list: ArrayList<MainListModel>) {
 
         val dialog = Dialog(this)

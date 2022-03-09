@@ -61,7 +61,7 @@ class ProfileFragment : Fragment() {
 
 
 
-
+//list on profile page
     fun profileMenu(){
          val PROFILE_MENU_LIST = ArrayList<ProfileMenuModel>()
         PROFILE_MENU_LIST.add(ProfileMenuModel(R.drawable.show_icon,"Rojkaa Points"))

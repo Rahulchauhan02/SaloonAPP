@@ -79,6 +79,7 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
     }
 
 
+    //Check is Location permission Granted or not
        private fun hasLocationpermission():Boolean {
 
 
@@ -87,6 +88,7 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
        }
 
 
+    //Request Location Permission
         private fun requestLocationPermission(){
             EasyPermissions.requestPermissions(this,"This Application Cannot work without Location"
            , 5 ,android.Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -94,6 +96,8 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
 
         }
 
+
+    //easy permission implemented method 1
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
          if (!hasLocationpermission()) {
                requestLocationPermission()
@@ -102,6 +106,7 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
            }
     }
 
+    //easy permission implemented method 2
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
        if (EasyPermissions.somePermissionPermanentlyDenied(this,perms)){
            AppSettingsDialog.Builder(requireActivity()).build().show()
@@ -110,6 +115,9 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
        }
 
     }
+
+
+    //permission result
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -120,6 +128,9 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
         EasyPermissions.onRequestPermissionsResult(requestCode,permissions,grantResults,this)
     }
 
+
+
+    //getting location data from location services
 
     @SuppressLint("MissingPermission")
     fun getLocationData(){
@@ -152,6 +163,10 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
 
     }
 
+
+
+
+    //check location enabled or not
     fun isLocationEnabled():Boolean{
         var locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
