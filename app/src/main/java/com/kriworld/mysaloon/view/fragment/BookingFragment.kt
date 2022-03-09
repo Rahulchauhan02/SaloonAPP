@@ -7,6 +7,7 @@ import android.location.Geocoder
 import android.location.LocationManager
 import android.location.LocationRequest
 import android.media.audiofx.Equalizer
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import androidx.fragment.app.Fragment
@@ -68,14 +69,9 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
            }
 
 
-       bookingBinding.locationTextBtn.setOnClickListener {
-             if (!hasLocationpermission()) {
-               requestLocationPermission()
-           }else{
-               Toast.makeText(requireContext(),"New Location Access is going on",Toast.LENGTH_SHORT).show()
-               getLocationData()
-           }
-       }
+        getLocationData()
+
+
 
 
 
@@ -99,7 +95,11 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
         }
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
-       getLocationData()
+         if (!hasLocationpermission()) {
+               requestLocationPermission()
+           }else{
+               getLocationData()
+           }
     }
 
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
@@ -128,8 +128,10 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
 
 
                 fusedLocationProviderClient.lastLocation.addOnCompleteListener { task ->
-                    var location = task.result
-                    if (location==null){}
+                    var location = task?.result
+                    if (location==null){
+
+                    }
                     else{
                        var lat = location.latitude
                        var long = location.longitude
@@ -139,7 +141,8 @@ class BookingFragment : Fragment(),EasyPermissions.PermissionCallbacks {
 
                     }
 
-                }
+
+            }
 
         }else{
 
