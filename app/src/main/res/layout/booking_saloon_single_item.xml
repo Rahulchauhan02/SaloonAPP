@@ -1,85 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="@dimen/_10sdp"
-    android:elevation="@dimen/_15sdp"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:layout_marginBottom="@dimen/_10sdp"
-    android:layout_marginStart="@dimen/_10sdp"
-    android:layout_marginEnd="@dimen/_10sdp"
-    android:layout_height="@dimen/_250sdp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:padding="@dimen/_10sdp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_92sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:elevation="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
+            android:id="@+id/booking_saloon_image"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_180sdp"
-            android:background="@drawable/banner_two"
-            android:scaleType="fitXY"/>
-        <RelativeLayout
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_20sdp"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:paddingLeft="@dimen/_10sdp"
-                android:layout_gravity="start"
-                android:maxLines="1"
-                android:maxLength="30"
-                android:ellipsize="end"
-                android:layout_height="match_parent"
-                android:text="New Design HairCut"/>
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                app:cardBackgroundColor="#008745"
-                app:cardCornerRadius="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="4.6"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_baseline_star_24"
-                    />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner_three" />
+    </androidx.cardview.widget.CardView>
 
-        </RelativeLayout>
+    <TextView
+        android:id="@+id/booking_saloon_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/alata"
+        android:text="title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:textColor="@color/black"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:background="@android:drawable/star_off"
+        android:backgroundTint="#000000"
+        android:backgroundTintMode="src_in"
+        app:layout_constraintStart_toStartOf="@+id/booking_saloon_name"
+        app:layout_constraintTop_toBottomOf="@+id/booking_saloon_name"
+        />
+
+    <TextView
+        android:id="@+id/booking_saloon_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.0"
+        android:textSize="@dimen/_12ssp"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/booking_saloon_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="Services"
+        android:maxLength="25"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/booking_saloon_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:text="faridabad"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/booking_saloon_services"
+        app:layout_constraintTop_toBottomOf="@+id/booking_saloon_services"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/booking_saloon_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="5 km"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/booking_saloon_area"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-
-    </LinearLayout>
-
-
-
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

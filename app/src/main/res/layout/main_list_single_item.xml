@@ -1,28 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="@dimen/_10sdp"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/_2sdp"
     android:layout_height="wrap_content">
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/main_list_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:fontFamily="@font/alata"
         android:gravity="start"
-        android:id="@+id/main_list_name"
-        android:textStyle="bold"
-        android:textSize="@dimen/_18sdp"
-        android:textColor="@color/black"
         android:hint="title"
-        android:fontFamily="@font/alata"/>
+        android:maxLength="25"
+        android:maxLines="1"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subRecyclerList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:orientation="vertical"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal"
-        android:id="@+id/subRecyclerList"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_list_name" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/downArrowBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_list_name"
+        app:layout_constraintEnd_toEndOf="@+id/main_list_name"
+        app:layout_constraintTop_toTopOf="@+id/main_list_name"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="#EDEAEA"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,4 +66,10 @@ dependencies {
     //dexter library
      implementation 'com.karumi:dexter:6.2.3'
 
+    //easyPermission
+     implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //Google Location
+      implementation 'com.google.android.gms:play-services-location:19.0.1'
+
 }

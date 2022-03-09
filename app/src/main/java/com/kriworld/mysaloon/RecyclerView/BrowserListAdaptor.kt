@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kriworld.mysaloon.R
 import com.kriworld.mysaloon.model.BrowseItemModel
+import com.kriworld.mysaloon.model.MainListModel
 
-class BrowserListAdaptor(val list:ArrayList<BrowseItemModel>,val context: Context):RecyclerView.Adapter<BrowserListAdaptor.BrowseViewholder>() {
+class BrowserListAdaptor(val list:ArrayList<MainListModel>,val context: Context):RecyclerView.Adapter<BrowserListAdaptor.BrowseViewholder>() {
 
     class BrowseViewholder(itemView:View):RecyclerView.ViewHolder(itemView){
       val item_name = itemView.findViewById<TextView>(R.id.browse_item_name)
@@ -21,7 +22,13 @@ class BrowserListAdaptor(val list:ArrayList<BrowseItemModel>,val context: Contex
     }
 
     override fun onBindViewHolder(holder: BrowseViewholder, position: Int) {
-        holder.item_name.text = list[position].item_name
+        holder.item_name.text = "${list[position].title} (${list[position].sublist.size})"
+
+        holder.itemView.setOnClickListener {
+
+        }
+
+
     }
 
     override fun getItemCount(): Int {
